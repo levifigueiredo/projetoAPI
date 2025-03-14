@@ -38,7 +38,7 @@ public class CategoriaService {
 
     public CategoriaResponseDTO atualizarCategoria(Long id, CategoriaRequestDTO requestDTO){
         Categoria categoriaExistente = categoriaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+                .orElseThrow(() -> new RuntimeException("Categoria não encontrada"));
         categoriaExistente.setNome(requestDTO.getNome());
         categoriaExistente.setDescricao(requestDTO.getDescricao());
 
